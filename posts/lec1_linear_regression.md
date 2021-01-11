@@ -6,7 +6,7 @@
 
 
 ### Machine Learning
-* Definition of Machine Learning
+* Definition of Machine Learning\\
    -Finding a model and its parameters so that the resulting predictor performs well on unseen data
    
 * Probabilistic Interpretation
