@@ -9,6 +9,9 @@
 * Definition of Machine Learning  
    -Finding a model and its parameters so that the resulting predictor performs well on unseen data
    
+   
+### Linear Regression
+
 * Section 1: LMS algorithm  
 
 * Section 2: The normal equations
@@ -16,4 +19,4 @@
 * Section 3: Probabilistic Interpretation
     * P(Y_test|X_text, D)
     
-### Linear Regression
+
