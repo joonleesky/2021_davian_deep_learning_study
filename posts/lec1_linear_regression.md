@@ -7,12 +7,13 @@
 
 ### Machine Learning
 * Definition of Machine Learning  
-   -Finding a model and its parameters so that the resulting predictor performs well on unseen data
+   - Finding a model and its parameters so that the resulting predictor performs well on unseen data
    
    
 ### Linear Regression
 
 * Section 1: LMS algorithm  
+   - **Cost function**: $$x + 1 $$  
 
 * Section 2: The normal equations
 
