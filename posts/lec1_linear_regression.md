@@ -29,8 +29,7 @@ Loop{
       }  
    }  
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you're using stochastic gradient descent. 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;But you have to update parameters at the same time, i.e., you can't update the first element of parameters before updating a second parameter. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you're using stochastic gradient descent. But you have to update parameters at the same time, i.e., you can't update the first element of parameters before updating a second parameter. 
 
 * Section 2: The normal equations  
    Using matrix, you can also transform (1) into ![](https://latex.codecogs.com/gif.latex?%5Cfrac%7B1%7D%7B2%7D%28X%5Ctheta%20-%20y%29%5ET%28X%5Ctheta%20-%20y%29)  
