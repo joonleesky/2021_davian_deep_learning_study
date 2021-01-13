@@ -6,9 +6,10 @@
 
 
 ### Machine Learning
-* Definition of Machine Learning  
-   - Finding a model and its parameters so that the resulting predictor performs well on unseen data
-   
+* Definition of Machine Learning:  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Finding a model and its parameters so that the resulting predictor performs well on unseen data  
+    
+   check
    
 ### Linear Regression
    
@@ -17,7 +18,7 @@
    
 * Section 1: LMS algorithm  
 
-   **Gradeint Descent**: ![gradient descent](https://latex.codecogs.com/gif.latex?%5Ctheta_j%20%3A%3D%20%5Ctheta_j%20-%20%5Calpha%20%5Cfrac%7B%5Cpartial%20%7D%7B%5Cpartial%20%5Ctheta_j%7DJ%28%5Ctheta%29). This becomes ![gradient descent2](https://latex.codecogs.com/gif.latex?%5Ctheta_j%20%3A%3D%20%5Ctheta_j%20&plus;%20%5Calpha%28y%5E%7B%28i%29%7D-h_%5Ctheta%20%28x%5E%7B%28i%29%7D%29%29x_j%5E%7B%28i%29%7D). This is called batch gradient descent becuase you are using entire training set.  
+   **Gradeint Descent**: ![gradient descent](https://latex.codecogs.com/gif.latex?%5Ctheta_j%20%3A%3D%20%5Ctheta_j%20-%20%5Calpha%20%5Cfrac%7B%5Cpartial%20%7D%7B%5Cpartial%20%5Ctheta_j%7DJ%28%5Ctheta%29). This becomes ![gradient descent2](https://latex.codecogs.com/gif.latex?%5Ctheta_j%20%3A%3D%20%5Ctheta_j%20&plus;%20%5Calpha%28y%5E%7B%28i%29%7D-h_%5Ctheta%20%28x%5E%7B%28i%29%7D%29%29x_j%5E%7B%28i%29%7D). This is called batch gradient descent becuase you are using an entire training set.  
 On the other hand, if you update the following way,  
 ```
 Loop{  
@@ -26,8 +27,8 @@ Loop{
  ```
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ![sto gd](https://latex.codecogs.com/gif.latex?%5Ctheta_j%20%3A%3D%20%5Ctheta_j%20&plus;%20%5Calpha%28y%5E%7B%28i%29%7D-h_%5Ctheta%20%28x%5E%7B%28i%29%7D%29%29x_j%5E%7B%28i%29%7D)&nbsp;&nbsp;&nbsp; (for every j)
 ```
-      }  
-   }  
+      }//for  
+   }//loop  
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you're using stochastic gradient descent. But you have to update parameters at the same time, i.e., you can't update the first element of parameters before updating a second parameter. 
 
