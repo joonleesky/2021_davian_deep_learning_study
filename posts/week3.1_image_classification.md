@@ -107,10 +107,10 @@ However, $L_1$ distance is $\sqrt{2}$ by its definition. As a result, $L_1$ dist
 
 ![img7](./posts/images/linear_classifier.png)
 
-- **Weight W : ** template for each specific class
-- **Bias b : ** data independence for some classes over another.(ex. if # cat >> # dog, then bias on cat is higher)
-- **Dot product between W and input X : ** similarity between template for the class and pixels of input img.
-- **Score : ** The larger scores, the larger probability of that input X being that class
+- **Weight W :** template for each specific class
+- **Bias b :** data independence for some classes over another.(ex. if # cat >> # dog, then bias on cat is higher)
+- **Dot product between W and input X :** similarity between template for the class and pixels of input img.
+- **Score :** The larger scores, the larger probability of that input X being that class
 
 ![img8](./posts/images/linear_classifier_g.png)
 
