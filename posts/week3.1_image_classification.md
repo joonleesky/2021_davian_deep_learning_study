@@ -39,7 +39,7 @@ use_math: true
   - For each test image, find **closest train image** and predict label of nearest image
 
 
-![img1](./posts/images/cifar10example.png)
+![img1](../images/cifar10example.png)
 
 ### Distance Metric
 
@@ -47,13 +47,13 @@ use_math: true
  
 \\[ d(I_1, I_2) = \sum _p \vert I_1^p - I_2^p \vert \\]
 
-![img2](./posts/images/l1.png)
+![img2](../images/l1.png)
 
 #### L2 distance:
 
 \\[ d(I_1, I_2) = \sqrt{\sum _p ( I_1^p - I_2^p )^2 } \\]
 
-![img3](./posts/images/l2.png)
+![img3](../images/l2.png)
 
 - Difference : 
   - L1 depends on **choice of coordinates ** 
@@ -61,7 +61,7 @@ use_math: true
   - L2 doesn't matter of coordinate frame
   - L2 is good for generic vector.
  
-![img4](./posts/images/difference.png)
+![img4](../images/difference.png)
 
 For example, consider the green line. Its $L_2$ distance is 1, same as $L_1$ distance.
 
@@ -73,7 +73,7 @@ However, $L_1$ distance is $\sqrt{2}$ by its definition. As a result, $L_1$ dist
 ### K-Nearest Neighbors
 : take **Majority vote** from K closest points
 
-![img5](./posts/images/knn.png)
+![img5](../images/knn.png)
 
 - Limitation : Curse of dimensionality
    - K-NN is proper when data distribution is quite dense.
@@ -95,7 +95,7 @@ However, $L_1$ distance is $\sqrt{2}$ by its definition. As a result, $L_1$ dist
 
 ## Cross validation
 
-![img6](./posts/images/cross_validation.png)
+![img6](../images/cross_validation.png)
 
 - Split data into **folds**, try each fold as validation and average the results
 - Useful for small datasets, but not used too frequently in deep learning
@@ -105,12 +105,12 @@ However, $L_1$ distance is $\sqrt{2}$ by its definition. As a result, $L_1$ dist
 -----------------------------
 ## Linear classifier
 
-![img7](./posts/images/linear_classifier.png)
+![img7](../images/linear_classifier.png)
 
 - **Weight W :** template for each specific class
 - **Bias b :** data independence for some classes over another.(ex. if # cat >> # dog, then bias on cat is higher)
 - **Dot product between W and input X :** similarity between template for the class and pixels of input img.
 - **Score :** The larger scores, the larger probability of that input X being that class
 
-![img8](./posts/images/linear_classifier_g.png)
+![img8](../images/linear_classifier_g.png)
 
