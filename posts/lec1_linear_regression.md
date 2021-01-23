@@ -22,18 +22,18 @@ where ![theta](https://latex.codecogs.com/gif.latex?%5Ctheta) are parameters, ![
 * **Section 1: LMS algorithm**  
 
    * **Gradeint Descent**: ![gradient descent](https://latex.codecogs.com/gif.latex?%5Ctheta_j%20%3A%3D%20%5Ctheta_j%20-%20%5Calpha%20%5Cfrac%7B%5Cpartial%20%7D%7B%5Cpartial%20%5Ctheta_j%7DJ%28%5Ctheta%29). This becomes ![gradient descent2](https://latex.codecogs.com/gif.latex?%5Ctheta_j%20%3A%3D%20%5Ctheta_j%20&plus;%20%5Calpha%28y%5E%7B%28i%29%7D-h_%5Ctheta%20%28x%5E%7B%28i%29%7D%29%29x_j%5E%7B%28i%29%7D). This is called batch gradient descent becuase you are using an entire training set.  
-On the other hand, if you update the following way,  
+On the other hand, if you update the following way, you're using stochastic gradient descent. But you have to update parameters at the same time, i.e., you can't update the first element of parameters before updating a second parameter.   
 ```
-    Loop{  
-        for i = 1 to n,  
-            {
+        Loop{  
+              for i = 1 to n,  
+                  {
  ```
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ![sto gd](https://latex.codecogs.com/gif.latex?%5Ctheta_j%20%3A%3D%20%5Ctheta_j%20&plus;%20%5Calpha%28y%5E%7B%28i%29%7D-h_%5Ctheta%20%28x%5E%7B%28i%29%7D%29%29x_j%5E%7B%28i%29%7D)&nbsp;&nbsp;&nbsp; (for every j)
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ![sto gd](https://latex.codecogs.com/gif.latex?%5Ctheta_j%20%3A%3D%20%5Ctheta_j%20&plus;%20%5Calpha%28y%5E%7B%28i%29%7D-h_%5Ctheta%20%28x%5E%7B%28i%29%7D%29%29x_j%5E%7B%28i%29%7D)&nbsp;&nbsp;&nbsp; (for every j)
 ```
-        }//for  
-        }//loop  
+                  }//for  
+            }//loop  
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you're using stochastic gradient descent. But you have to update parameters at the same time, i.e., you can't update the first element of parameters before updating a second parameter. 
+
 
 * **Section 2: The normal equations**  
    Using matrix, you can also transform **(1)** into ![](https://latex.codecogs.com/gif.latex?%5Cfrac%7B1%7D%7B2%7D%28X%5Ctheta%20-%20y%29%5ET%28X%5Ctheta%20-%20y%29)  
