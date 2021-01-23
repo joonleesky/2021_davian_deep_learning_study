@@ -7,7 +7,7 @@
 
 ### Machine Learning
 * Definition of Machine Learning:  
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Finding a model and its parameters so that the resulting predictor performs well on unseen data  
+Finding a model and its parameters so that the resulting predictor performs well on unseen data  
     
    ![](https://latex.codecogs.com/gif.latex?%5Cbegin%7Baligned%7D%20p%28y%27%20%5Cmid%20x%27%2CD%29%20%26%3D%20%5Cint%20p%28y%27%2C%5Ctheta%20%5Cmid%20x%27%2CD%29%20d%5Ctheta%5C%5C%20%26%3D%20%5Cint%20%5Cfrac%7Bp%28y%27%20%5Cmid%20x%27%2C%5Ctheta%2C%20D%29%20%5Ccdot%20p%28%5Ctheta%20%5Cmid%20x%27%2CD%29%20%5Ccdot%20p%28D%20%5Cmid%20x%27%29%7D%7Bp%28D%20%5Cmid%20x%27%29%7D%20d%5Ctheta%5C%5C%20%26%3D%20%5Cint%20p%28y%27%20%5Cmid%20x%27%2C%20D%3B%20%5Ctheta%29%20%5Ccdot%20p%28%5Ctheta%20%5Cmid%20x%27%2C%20D%29%20d%5Ctheta%5C%5C%20%26%3D%20%5Cint%20p%28y%27%5Cmid%20x%27%3B%5Ctheta%29%20%5Ccdot%20p%28%5Ctheta%20%5Cmid%20D%29%20d%5Ctheta%5C%5C%20%26%3D%20E_%7B%5Ctheta%20%5Csim%20p%28%5Ctheta%20%5Cmid%20D%29%7D%5Bp%28y%27%20%5Cmid%20x%27%3B%5Ctheta%29%5D%20%5Cend%7Baligned%7D)  
    **Estimation:**  
@@ -28,7 +28,7 @@ On the other hand, if you update the following way, you're using stochastic grad
               for i = 1 to n,  
                   {
  ```
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ![sto gd](https://latex.codecogs.com/gif.latex?%5Ctheta_j%20%3A%3D%20%5Ctheta_j%20&plus;%20%5Calpha%28y%5E%7B%28i%29%7D-h_%5Ctheta%20%28x%5E%7B%28i%29%7D%29%29x_j%5E%7B%28i%29%7D)&nbsp;&nbsp;&nbsp; (for every j)
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ![sto gd](https://latex.codecogs.com/gif.latex?%5Ctheta_j%20%3A%3D%20%5Ctheta_j%20&plus;%20%5Calpha%28y%5E%7B%28i%29%7D-h_%5Ctheta%20%28x%5E%7B%28i%29%7D%29%29x_j%5E%7B%28i%29%7D)&nbsp;&nbsp;&nbsp; (for every j)
 ```
                   }//for  
             }//loop  
