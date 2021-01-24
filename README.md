@@ -7,7 +7,7 @@
 | 4th January, 2021   | [(cs229) Lecture 2: Linear Regression and Gradient Descent][cs229-lec2]                       | Junseok Ha  | [video][week1-vid] |[note][week1.1-note] |
 | 4th January, 2021   | [(cs229) Lecture 3: Weighted Least Squares. Logistic regression. Newton's Method][cs229-lec3] | Minho Park  | [video][week1-vid] |[note][week1.2-note] |
 | 11th January, 2021  | [(cs229) Lecture 4: Perceptron. Exponential family. Generalized Linear Models][cs229-lec4]    | Minjung Kim | [video][week2-vid]| - |
-| 18th January, 2021  | [(cs231n) Lecture 2: Image Classification][cs231n-lec2]              | Yeojeong Park | [video][week3-vid] | - |
+| 18th January, 2021  | [(cs231n) Lecture 2: Image Classification][cs231n-lec2]              | Yeojeong Park | [video][week3-vid] | [note][week3.1-note] |
 | 18th January, 2021  | [(cs231n) Lecture 3: Loss Functions and Optimization][cs231n-lec3]   | Jaesung Lee  | [video][week3-vid] | - |
 | 25th January, 2021  | [(cs231n) Lecture 4: Introduction to Neural Networks][cs231n-lec4]   | Soonjoon Kwon| - | - |
 | 25th January, 2021  | [(cs231n) Lecture 5: Convolutional Neural Networks][cs231n-lec5]     | Dongyun Woo  | - | - |
@@ -46,3 +46,4 @@
 
 [week1.1-note]:posts/week1.1_linear_regression.md
 [week1.2-note]:posts/week1.2_locally_weighted_and_logistic_regression.md
+[week3.1-note]:posts/weak3.1_image_classification.md
