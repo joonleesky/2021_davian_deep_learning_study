@@ -46,4 +46,4 @@
 
 [week1.1-note]:posts/week1.1_linear_regression.md
 [week1.2-note]:posts/week1.2_locally_weighted_and_logistic_regression.md
-[week3.1-note]:posts/weak3.1_image_classification.md
+[week3.1-note]:posts/week3.1_image_classification.md
