@@ -98,7 +98,7 @@ However, $L_1$ distance is $\sqrt{2}$ by its definition. As a result, $L_1$ dist
 - Useful for small datasets, but not used too frequently in deep learning
 
 ### If K is very large, what happened?
-(from [here](https://stats.stackexchange.com/questions/61783/bias-and-variance-in-leave-one-out-vs-k-fold-cross-validation/357749#357749))
+(reference : [here](https://stats.stackexchange.com/questions/61783/bias-and-variance-in-leave-one-out-vs-k-fold-cross-validation/357749#357749))
 
 - Leave-one-out cross validation(LOOCV) : Use only one data for validation(i.e. K = # of data)
 - For predictions during cross validation, **LOOCV has low variance for it.**
