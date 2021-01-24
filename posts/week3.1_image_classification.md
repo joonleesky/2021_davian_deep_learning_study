@@ -134,4 +134,67 @@ However, $L_1$ distance is $\sqrt{2}$ by its definition. As a result, $L_1$ dist
 
 <img src="./images/linear_classifier_g.png" width=500>
 
+------------------------------
+## [Additional Resources] Deep Double Descent : Where Bigger Models And More Data Hurt(2019)
+
+<img src="./images/ddd1.png">
+
+### Double Descent phenomenon
+> Bigger models are better
+
+<img src="./images/ddd1.png">
+
+- Performance first **improves**, then gets **worse**, and then **improves** again with increasing model size, data size, or training time.
+- This phenomenon is called _"Double Descent"_
+
+### EMC(Effective Model Complexity)
+
+<img src="./images/ddd2.png">
+
+- EMC: the maximum number of samples n on which Training procedure T acheives on average ≈ 0 training error
+
+<img src="./images/ddd3.png">
+
+- interpolation threshold : EMC(T) = n
+- Critical interval : interval around interpolation threshold
+  - Below and above critical interval : complexity ↑, performance ↑
+  - Within critical interval : performance ↓
+
+<img src="./images/ddd5.svg">
+
+### Model-wise double descent
+
+<img src="./images/ddd4.png">
+
+- Double Descent intensifies when there is more label noise.
+
+### Epoch-wise double descent
+
+<img src="./images/ddd6.png">
+
+- (Left) Larger model and intermediate model has double descent.
+  - Larger model has double descent earlier than intermediate one.
+- (Right) Test error of larger model descreases first, increases, and then descreases again as # of epochs increases.
+  - But test error of intermediate model is not. It is better to stop early.
+
+### Sample-wise non-monotonicity
+
+<img src="./images/ddd8.png">
+
+- (Left) Double descent abates when more samples.
+- (Right) there is a regime where more samples hurt performance. But more than 10K, smaller model is better.
+
+<img src="./images/ddd7.svg">
+
+- increasing # of samples shifts the curve downwards towards lower test error.
+- More samples require larger models to fit.
+- For intermediate model, more samples hurts performance.
+
+
+### Conclusion
+
+- **In general, the peak of test error appears when models are just barely able to fit the train set.**
+- Models at the interpolation threshold is the worst and label noise can easily destroy its gloabl structure.
+- However, in the over-parameterized regime, there are many models that fit the train set.
+- But authors don't know why this tendency happens.
 
