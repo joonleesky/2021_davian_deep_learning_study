@@ -103,7 +103,7 @@ However, $L_1$ distance is $\sqrt{2}$ by its definition. As a result, $L_1$ dist
 - Leave-one-out cross validation(LOOCV) : Use only one data for validation(i.e. K = # of data)
 - For predictions during cross validation, **LOOCV has low variance for it.**
   - since training sets between folds overlap substantially, and only one data shifted across folds.(**= Highly Correlated data**)
-- For predictions after training on new datasets, **LOOCV has high variance for it.**
+- For predictions on new datasets after training, **LOOCV has high variance for it.**
   - all folds in LOOCV are highly correlated -> each training set is almost same.
   - if there are some bad association between training and test set, model cannot identify the noise.
   - i.e. Model is **overfitted** to training dataset.
