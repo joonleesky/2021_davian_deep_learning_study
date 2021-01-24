@@ -1,15 +1,3 @@
----
-layout: post
-title: image classification 
-date: '2021-01-21 14:00:00'
-description: # Add post description (optional)
-img: default.jpg # Add image post (optional)
-tags: [Study]
-author: # Add name author (optional)
-use_math: true
----
-
-
 # DAVIAN Lab. Deep Learning Winter Study (2021)
 
 - **Writer:** Yeojeong Park
@@ -137,12 +125,10 @@ However, $L_1$ distance is $\sqrt{2}$ by its definition. As a result, $L_1$ dist
 ------------------------------
 ## [Additional Resources] Deep Double Descent : Where Bigger Models And More Data Hurt(2019)
 
-<img src="./images/ddd1.png">
-
 ### Double Descent phenomenon
 > Bigger models are better
 
-<img src="./images/ddd1.png">
+<img src="./images/ddd1.png" height=300>
 
 - Performance first **improves**, then gets **worse**, and then **improves** again with increasing model size, data size, or training time.
 - This phenomenon is called _"Double Descent"_
@@ -153,6 +139,8 @@ However, $L_1$ distance is $\sqrt{2}$ by its definition. As a result, $L_1$ dist
 
 - EMC: the maximum number of samples n on which Training procedure T acheives on average ≈ 0 training error
 
+
+
 <img src="./images/ddd3.png">
 
 - interpolation threshold : EMC(T) = n
@@ -160,7 +148,7 @@ However, $L_1$ distance is $\sqrt{2}$ by its definition. As a result, $L_1$ dist
   - Below and above critical interval : complexity ↑, performance ↑
   - Within critical interval : performance ↓
 
-<img src="./images/ddd5.svg">
+<img src="./images/ddd5.svg" height=500>
 
 ### Model-wise double descent
 
@@ -184,7 +172,7 @@ However, $L_1$ distance is $\sqrt{2}$ by its definition. As a result, $L_1$ dist
 - (Left) Double descent abates when more samples.
 - (Right) there is a regime where more samples hurt performance. But more than 10K, smaller model is better.
 
-<img src="./images/ddd7.svg">
+<img src="./images/ddd7.svg" height=300>
 
 - increasing # of samples shifts the curve downwards towards lower test error.
 - More samples require larger models to fit.
@@ -198,3 +186,7 @@ However, $L_1$ distance is $\sqrt{2}$ by its definition. As a result, $L_1$ dist
 - However, in the over-parameterized regime, there are many models that fit the train set.
 - But authors don't know why this tendency happens.
 
+#### references
+- https://arxiv.org/pdf/1912.02292.pdf
+- https://openai.com/blog/deep-double-descent/
+- https://bluediary8.tistory.com/59
