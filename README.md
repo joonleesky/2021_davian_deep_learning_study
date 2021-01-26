@@ -10,7 +10,7 @@
 | 18th January, 2021  | [(cs231n) Lecture 2: Image Classification][cs231n-lec2]              | Yeojung Park | [video][week3-vid] | - |
 | 18th January, 2021  | [(cs231n) Lecture 3: Loss Functions and Optimization][cs231n-lec3]   | Jaesung Lee  | [video][week3-vid] | - |
 | 25th January, 2021  | [(cs231n) Lecture 4: Introduction to Neural Networks][cs231n-lec4]   | Soonjoon Kwon| - | - |
-| 25th January, 2021  | [(cs231n) Lecture 5: Convolutional Neural Networks][cs231n-lec5]     | Dongyun Woo  | - | - |
+| 25th January, 2021  | [(cs231n) Lecture 5: Convolutional Neural Networks][cs231n-lec5]     | Dongyeon Woo  | - | - |
 | 1st February, 2021  | [(cs231n) Lecture 6: Training Neural Networks, part 1][cs231n-lec6]  | Yuri Kim     | - | - |
 | 1st February, 2021  | [(cs231n) Lecture 7: Training Neural Networks, part 2][cs231n-lec7]  | Seungwoo Ryu | - | - |
 | 15th February, 2021 | [(cs231n) Lecture 9: CNN Architectures][cs231n-lec9]                 | Dongmin Yoo  | - | - |
