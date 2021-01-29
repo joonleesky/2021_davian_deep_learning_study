@@ -6,11 +6,11 @@
 |:------------------:|:----------------------------------------:|:----------:|:------:|:-----:
 | 4th January, 2021   | [(cs229) Lecture 2: Linear Regression and Gradient Descent][cs229-lec2]                       | Junseok Ha  | [video][week1-vid] |[note][week1.1-note] |
 | 4th January, 2021   | [(cs229) Lecture 3: Weighted Least Squares. Logistic regression. Newton's Method][cs229-lec3] | Minho Park  | [video][week1-vid] |[note][week1.2-note] |
-| 11th January, 2021  | [(cs229) Lecture 4: Perceptron. Exponential family. Generalized Linear Models][cs229-lec4]    | Minjung Kim | [video][week2-vid]| - |
+| 11th January, 2021  | [(cs229) Lecture 4: Perceptron. Exponential family. Generalized Linear Models][cs229-lec4]    | Minjung Kim | [video][week2-vid]| [note][week2-note] |
 | 18th January, 2021  | [(cs231n) Lecture 2: Image Classification][cs231n-lec2]              | Yeojeong Park | [video][week3-vid] | [note][week3.1-note] |
 | 18th January, 2021  | [(cs231n) Lecture 3: Loss Functions and Optimization][cs231n-lec3]   | Jaesung Lee  | [video][week3-vid] | - |
-| 25th January, 2021  | [(cs231n) Lecture 4: Introduction to Neural Networks][cs231n-lec4]   | Soonjoon Kwon| - | - |
-| 25th January, 2021  | [(cs231n) Lecture 5: Convolutional Neural Networks][cs231n-lec5]     | Dongyun Woo  | - | - |
+| 25th January, 2021  | [(cs231n) Lecture 4: Introduction to Neural Networks][cs231n-lec4]   | Soonjoon Kwon| [video][week4.1-vid]  | - |
+| 25th January, 2021  | [(cs231n) Lecture 5: Convolutional Neural Networks][cs231n-lec5]     | Dongyun Woo  | [video][week4.2-vid]| - |
 | 1st February, 2021  | [(cs231n) Lecture 6: Training Neural Networks, part 1][cs231n-lec6]  | Yuri Kim     | - | - |
 | 1st February, 2021  | [(cs231n) Lecture 7: Training Neural Networks, part 2][cs231n-lec7]  | Seungwoo Ryu | - | - |
 | 15th February, 2021 | [(cs231n) Lecture 9: CNN Architectures][cs231n-lec9]                 | Dongmin Yoo  | - | - |
@@ -43,7 +43,10 @@
 [week1-vid]:https://drive.google.com/file/d/1dCY3Khg-jvQI5YslXaHyrnZQBlLr5kCA/view?usp=sharing
 [week2-vid]:https://drive.google.com/file/d/1r_6AmoStJu8nGAkOE44FQ-PdlNAJMvNF/view?usp=sharing
 [week3-vid]:https://drive.google.com/file/d/1Eh3WuZoCmaTePjuG5CLq3mWlFXvy9WCl/view?usp=sharing
+[week4.1-vid]:https://drive.google.com/file/d/18n4B4c0HgjyELsW_iFBw7350Uqc446EM/view?usp=sharing
+[week4.2-vid]:https://drive.google.com/file/d/1BBYDjJ88xwUTpKvft67c6nkw1JfroPl5/view?usp=sharing
 
 [week1.1-note]:posts/week1.1_linear_regression.md
 [week1.2-note]:posts/week1.2_locally_weighted_and_logistic_regression.md
+[week2-note]:posts/week2_perceptron_exponentialfamily_softmax.md
 [week3.1-note]:posts/week3.1_image_classification.md
