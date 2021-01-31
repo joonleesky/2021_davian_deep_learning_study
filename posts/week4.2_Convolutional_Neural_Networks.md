@@ -94,3 +94,4 @@
 ### References
 * <https://cs231n.github.io/convolutional-networks/>
 * <https://towardsdatascience.com/intuitively-understanding-convolutions-for-deep-learning-1f6f42faee1>
+* <https://www.bouvet.no/bouvet-deler/understanding-convolutional-neural-networks-part-1>
