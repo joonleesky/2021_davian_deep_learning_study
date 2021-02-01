@@ -11,8 +11,8 @@
 | 18th January, 2021  | [(cs231n) Lecture 3: Loss Functions and Optimization][cs231n-lec3]   | Jaesung Lee  | [video][week3-vid] | - |
 | 25th January, 2021  | [(cs231n) Lecture 4: Introduction to Neural Networks][cs231n-lec4]   | Soonjoon Kwon| - | - |
 | 25th January, 2021  | [(cs231n) Lecture 5: Convolutional Neural Networks][cs231n-lec5]     | Dongyun Woo  | - | - |
-| 1st February, 2021  | [(cs231n) Lecture 6: Training Neural Networks, part 1][cs231n-lec6]  | Yuri Kim     | - | - |
-| 1st February, 2021  | [(cs231n) Lecture 7: Training Neural Networks, part 2][cs231n-lec7]  | Seungwoo Ryu | - | - |
+| 1st February, 2021  | [(cs231n) Lecture 6: Training Neural Networks, part 1][cs231n-lec6]  | Yuri Kim     | [video][week4-vid-1] | - |
+| 1st February, 2021  | [(cs231n) Lecture 7: Training Neural Networks, part 2][cs231n-lec7]  | Seungwoo Ryu | [video][week4-vid-2] | - |
 | 15th February, 2021 | [(cs231n) Lecture 9: CNN Architectures][cs231n-lec9]                 | Dongmin Yoo  | - | - |
 | 15th February, 2021 | [(lecun) Week10: Self-Supervised Learning][lecun-ssl]                | Chan Lee     | - | - |
 | 22th February, 2021 | [(cs231n) Lecture 10: Recurrent Neural Networks][cs231n-lec10]       | Jaeyoon Chun | - | - |
@@ -43,6 +43,8 @@
 [week1-vid]:https://drive.google.com/file/d/1dCY3Khg-jvQI5YslXaHyrnZQBlLr5kCA/view?usp=sharing
 [week2-vid]:https://drive.google.com/file/d/1r_6AmoStJu8nGAkOE44FQ-PdlNAJMvNF/view?usp=sharing
 [week3-vid]:https://drive.google.com/file/d/1Eh3WuZoCmaTePjuG5CLq3mWlFXvy9WCl/view?usp=sharing
+[week4-vid-1]:https://drive.google.com/file/d/134ughAeBGKddBLKHYDE74ELw4sz-bYvo/view?usp=sharing
+[week4-vid-2]:https://drive.google.com/file/d/1Nf9ci1f70H_ZIJppEFk3jGXWd9xsv5x4/view?usp=sharing
 
 [week1.1-note]:posts/week1.1_linear_regression.md
 [week1.2-note]:posts/week1.2_locally_weighted_and_logistic_regression.md
