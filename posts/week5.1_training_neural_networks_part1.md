@@ -125,7 +125,7 @@ We currently are basically constraining the regime into the tanh layer so that t
 - Additional parameters : &#947; and &#946;
 ![](images/batch_norm.png)
 
-> When our network learns the scaling factor(&#947;) to be the variance, and &#946; to be the mean, this allows to recover the identity function
+> When our network learns the scaling factor(&#947;) to be the variance, and &#946; to be the mean, this allows to recover the identity function</br>
 > This will give us the flexibility of making our activation(tanh) less saturated and have good training
 
 ## Babysitting the learning process
@@ -145,8 +145,8 @@ To pick the best hyperparameters, try cross validation in the following steps :
 - Pick values that are pretty spread apart
 - Run a few epochs and see which values are good or not
 - After finding a general range, run CV for a longer and finer search
-> Tip 1 : To detect NaNs beforehand, look at the costs every iteration and if you get a value much bigger than your original loss, break the loop and try some other value
-> Tip 2 : Try log instead of uniform values because they will be multiplied
+> Tip 1 : To detect NaNs beforehand, look at the costs every iteration and if you get a value much bigger than your original loss, break the loop and try some other value</br>
+> Tip 2 : Try log instead of uniform values because they will be multiplied</br>
 > Tip 3 : Make sure the best value is somewhere middle in the range instead of the edge to fully explore possible choices
 
 ## Random search vs grid search
