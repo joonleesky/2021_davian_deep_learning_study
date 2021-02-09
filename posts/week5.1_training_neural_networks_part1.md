@@ -21,6 +21,7 @@
 
 ### 1. Sigmoid
 <img src="https://latex.codecogs.com/gif.latex?\sigma(x)&space;=&space;{1&space;\over&space;1&space;&plus;&space;e^{-x}}" title="\sigma(x) = {1 \over 1 + e^{-x}}" />
+
 ![](images/sigmoid.png)
 - The **sigmoid** function takes each element and squashes it into the range of [0,1]
     Thus, if you get very high values as input, the output would be very near to 1. On the other hand for negative values, it will be near zero
@@ -36,14 +37,29 @@
 
 ### 2. Tanh
 ![](images/tanh.png)
-> Tanh squashes each element into a range of [-1,1] : **zero-centered**
+- Tanh squashes each element into a range of [-1,1] : **zero-centered**
 
 #### Problem
-> However it still kills the gradient flow when saturated(flat)
+- However it still kills the gradient flow when saturated(flat)
 &#8594; a bit better than sigmoid
 
 ### 3. ReLU
+f(x)=max(0,x)
+![](images/relu.png)
+- It doesn't saturate in the positive region
+- Computationally efficient
+- Coverges about 6 times faster than sigmoid/tanh
+- Biologically more plausible : closer approximation in neuroscience experiments
 
+#### Problem
+- Still not zero-centered
+- The negative half is still saturated and kills the gradient
+- **Dead ReLU** : will never activate and update
+```
+Reason 1. Bad initialization : weights can be off the data cloud and will never get input to activate
+Reason 2. High learning rate : start off with a good ReLU but the updates are too huge and the weights jump around
+&#8594; ReLU units get knocked off the data manifold during training
+```
 
 
 ### Conclusion
