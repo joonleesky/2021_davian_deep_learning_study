@@ -60,7 +60,7 @@ Reason 1. Bad initialization : weights can be off the data cloud and will never 
 Reason 2. High learning rate : start off with a good ReLU but the updates are too huge and the weights jump around
 → ReLU units get knocked off the data manifold during training
 ```
-> initializing with slightly positive biases may increase the likelihood of it being active and more **firing** ReLUs
+> Initializing with slightly positive biases may increase the likelihood of it being active and more **firing** ReLUs
 
 ### 4. Leaky ReLU
 f(x)=max(0.01x,x)
@@ -87,7 +87,7 @@ f(x)=max(ax,x)
 ![](images/maxout.png)
 - Generalizes the ReLU and the Leaky ReLU
 - Operating in a linear regime, it doesn’t saturate or die
-&nbsp; &#8594; However this doubles the number of parameters and neurons
+</br> &#8594; However this doubles the number of parameters and neurons
 
 &#8756; In conclusion, **use ReLU** with caution in adjusting learning rates. Also, try out other variants of it or tanh but don't use sigmoid.
 
