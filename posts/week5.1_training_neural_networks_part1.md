@@ -7,7 +7,6 @@
 - **Title:** (cs231n) Lecture 7 : Training Neural Networks, part I
 - **Link:** http://cs231n.stanford.edu/slides/2020/lecture_7.pdf
 - **Keywords:** Activation functions, data processing, Batch Normalization, Transfer learning
--------------------------------------------------------
 
 ## Details of training Neural Networks
 - How do we set up our neural networks at the beginning?
@@ -92,7 +91,20 @@ f(x)=max(ax,x)
 &#8756; In conclusion, **use ReLU** with caution in adjusting learning rates. Also, try out other variants of it or tanh but don't use sigmoid.
 
 ## Data preprocessing
+- Take the original data and zero-mean them and normalize it finally
+- However when the inputs are all positive or biased, the gradients of the weights are all in the same direction and thus, we achieve *suboptimal optimization*(revisit the zigzag problem)
 
+- **In practice** the zero-centering is done but not much of normalization since you have relatively comparable scale and distribution in pixels compared to more general machine learning problems that have very different scale
+- Likely, PCA or whitening is not as common because it is more preferable to have the spatial structure over the original image
+- For testing, we apply the same empirical mean that was used in training
+---------------------------
+### In practice for images
+1. Subtract the mean image from each image which has the same size(ex. AlexNet)
+2. Subtract per-channel mean: take the mean by channel(RGB) when it is similar across the whole image which is easier(ex. VGGNet)
+
+## Weight Initialization
+1. Small gaussian random numbers
+2. Xavier initialization
 
 ### Conclusion
 
