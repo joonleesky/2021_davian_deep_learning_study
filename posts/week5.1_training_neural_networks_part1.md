@@ -150,7 +150,7 @@ To pick the best hyperparameters, try cross validation in the following steps :
 > Tip 3 : Make sure the best value is somewhere middle in the range instead of the edge to fully explore possible choices
 
 ## Random search vs grid search
-Better to sample from **random values** than grids
+Better to sample from **random values** than grids</br>
 ![](images/cv_search.png)
 - It is highly likely that the action space would be fully explored due to the **randomness**, which would take a long time for the grid search to reach and cover
 - This works best under the assumption that *not all hyperparameters are equally important*
