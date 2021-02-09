@@ -23,11 +23,11 @@
 
 ![](images/sigmoid.png)
 - The **sigmoid** function takes each element and squashes it into the range of [0,1]</br>
-    Thus, if you get very high values as input, the output would be very near to 1. On the other hand for negative values, it will be near zero
+    Thus, if you get very high values as input, the output would be very near to 1. On the other hand for negative values, it will be near zero.
 - Saturation at 'firing rates' of a neuron
 
 #### Problem
-1. Saturated neurons can *kill off* the gradients : In the regions where the function is flat, the gradient will be 0. Hence when we multiply it with the upstream gradient, it will become very small and "kill" the gradient flow
+1. Saturated neurons can **kill off** the gradients : In the regions where the function is flat, the gradient will be 0. Hence when we multiply it with the upstream gradient, it will become very small and "kill" the gradient flow
 2. Sigmoid outputs are not zero-centered : If the inputs are all positive, the gradients on the weights will all be in the *same direction* which gives very inefficient gradient updates
 
 **Example)** When w(weights) is 2-dimensional, only two gradient update directions will be possible which will result in a **zig zag path** which is less efficient than if the optimal direction was directly followed
@@ -163,7 +163,7 @@ Better to sample from **random values** than grids</br>
 - You don’t want your updates to be too large or too small compared to your value to have it dominate the values or have a very small effect
 </br> &#8594; ratio should be around **0.0001**
 
-#### Reference & Further readings
+## Reference & Further readings
 - http://sqlml.azurewebsites.net/2017/08/09/neural-network/
 - https://medium.com/analytics-vidhya/activation-functions-why-tanh-outperforms-logistic-sigmoid-3f26469ac0d1
 - https://nittaku.tistory.com/267
