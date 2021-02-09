@@ -104,7 +104,27 @@ f(x)=max(ax,x)
 
 ## Weight Initialization
 1. Small gaussian random numbers
+    - When sd is **1e-2** : will be a problem as the network grows and becomes deeper
+    </br> &#8594;As we multiply by w, the values quickly shrink and collapse and eventually all activation will become 0, thus no learning
+    - When sd is **1** : weights are going to be very big which will have saturated regimes
+    </br> &#8594;Local gradients will be 0, thus no learning
 2. Xavier initialization
+- The basic idea is that scale the weights by the number of the inputs so that the variance of the input should be the same as the variance of the output &#8594; **Unit Gaussian!**
+- Problem : This does not hold for ReLU because half of them are zero and the variance will be too small
+&#8594; Solution : Divide by an extra 2, adjusting for the fact that half the neurons get killed
+
+## Batch normalization
+**Force the activation to have unit gaussian activations** : normalize by the mean & std of each neuron
+- Compute the empirical mean and var independently for each dimension and normalize by this
+</br> &#8594; usually inserted **after** fc layers because in cnn when we multiply with W, it can result in bad scales and batch normalization can undo this effect
+
+- For **convolution layers**, normalize jointly of both dimension *and* training examples so that nearby locations will be the same in line with the convolutional property &#8594; one mean and std per activation map
+-----------------------------------------
+### What if we want control over how much saturation to have?
+We currently are basically constraining the regime into the tanh layer so that there is no saturation. But what if we may want saturation up to some extent?
+- Additional parameters : &#947; and &#946;
+> this allows to recover the identity function if we wanted to
+
 
 ### Conclusion
 
