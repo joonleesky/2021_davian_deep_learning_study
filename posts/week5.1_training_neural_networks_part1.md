@@ -123,7 +123,42 @@ f(x)=max(ax,x)
 ### What if we want control over how much saturation to have?
 We currently are basically constraining the regime into the tanh layer so that there is no saturation. But what if we may want saturation up to some extent?
 - Additional parameters : &#947; and &#946;
-> this allows to recover the identity function if we wanted to
+![](images/batch_norm.png)
+
+> When our network learns the scaling factor(&#947;) to be the variance, and &#946; to be the mean, this allows to recover the identity function
+> This will give us the flexibility of making our activation(tanh) less saturated and have good training
+
+## Babysitting the learning process
+- How do we monitor the training?
+- How do we adjust hyperparameters to get good learning results?
+
+1. Preprocess the data and choose & initialize the architecture
+2. Forpass through the network and check if our loss is reasonable based on the activation function or number of labels
+3. Run a sanity check on whether the loss goes up when we crank up the regularization
+4. Start training with small data and see if we get good training loss whilst overfitting
+5. Once we're done with sanity checks, start with small regularization and determine the learning rate
+</br> &#8594; If the loss barely changes, it may be because the learning rate is too small and is not getting updated well
+</br> &#8594; If the loss is NaN, the learning rate is too big so our cost has exploded
+
+## Hyperparameter Optimization
+To pick the best hyperparameters, try cross validation in the following steps : 
+- Pick values that are pretty spread apart
+- Run a few epochs and see which values are good or not
+- After finding a general range, run CV for a longer and finer search
+> Tip 1 : To detect NaNs beforehand, look at the costs every iteration and if you get a value much bigger than your original loss, break the loop and try some other value
+> Tip 2 : Try log instead of uniform values because they will be multiplied
+> Tip 3 : Make sure the best value is somewhere middle in the range instead of the edge to fully explore possible choices
+
+## Random search vs grid search
+Better to sample from **random values** than grids
+
+## Hyperparameters to play with
+- Loss curves that are flat at the beginning then starts to train generally means bad initialization
+- Big gap between training and validation accuracy would indicate overfitting, thus you would need regularization
+- When there's no gap between training & validation accuracy, try increasing the model capacity since you haven't overfit yet
+- You don’t want your updates to be too large or too small compared to your value to have it dominate the values or have a very small effect
+</br> &#8594; ratio should be around 0.0001
+
 
 
 ### Conclusion
