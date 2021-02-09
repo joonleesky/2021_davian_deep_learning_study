@@ -43,7 +43,7 @@
 &#8594; a bit better than sigmoid
 
 ### 3. ReLU
-f(x)=max(0,x)
+f(x)=max(0,x)</br>
 ![](images/relu.png)
 - It doesn't saturate in the positive region
 - Computationally efficient
@@ -62,14 +62,14 @@ Reason 2. High learning rate : start off with a good ReLU but the updates are to
 > Initializing with slightly positive biases may increase the likelihood of it being active and more **firing** ReLUs
 
 ### 4. Leaky ReLU
-f(x)=max(0.01x,x)
+f(x)=max(0.01x,x)</br>
 ![](images/leaky_relu.png)
 - No saturation at the negative space(No gradient dying problem)
 - Computationally efficient
 - Converges much faster than sigmoid/tanh
 
 ### 5. PReLU
-f(x)=max(ax,x)
+f(x)=max(ax,x)</br>
 ![](images/prelu.png)
 - Because the slope in the negative regime is trained as a parameter, it gives the model more flexibility
 
@@ -159,10 +159,6 @@ Better to sample from **random values** than grids
 - You don’t want your updates to be too large or too small compared to your value to have it dominate the values or have a very small effect
 </br> &#8594; ratio should be around 0.0001
 
-
-
-### Conclusion
-
-
-#### references
-- 
+#### Reference & Further readings
+- http://sqlml.azurewebsites.net/2017/08/09/neural-network/
+- https://medium.com/analytics-vidhya/activation-functions-why-tanh-outperforms-logistic-sigmoid-3f26469ac0d1
