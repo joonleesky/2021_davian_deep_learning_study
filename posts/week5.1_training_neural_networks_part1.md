@@ -21,6 +21,7 @@
 
 ### 1. Sigmoid
 <img src="https://latex.codecogs.com/gif.latex?\sigma(x)&space;=&space;{1&space;\over&space;1&space;&plus;&space;e^{-x}}" title="\sigma(x) = {1 \over 1 + e^{-x}}" />
+
 ![](images/sigmoid.png)
 - The **sigmoid** function takes each element and squashes it into the range of [0,1]
     Thus, if you get very high values as input, the output would be very near to 1. On the other hand for negative values, it will be near zero
