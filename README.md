@@ -14,7 +14,7 @@
 | 1st February, 2021  | [(cs231n) Lecture 6: Training Neural Networks, part 1][cs231n-lec6]  | Yuri Kim      | [video][week5.1-vid] | [note][week5.1-note] |
 | 1st February, 2021  | [(cs231n) Lecture 7: Training Neural Networks, part 2][cs231n-lec7]  | Seungwoo Ryu  | [video][week5.2-vid] | - |
 | 15th February, 2021 | [(cs231n) Lecture 9: CNN Architectures][cs231n-lec9]                 | Dongmin Yoo   | - | - |
-| 15th February, 2021 | (jchoo) Week10: Self-Supervised Learning [(1)][jchoo-ssl1] [(2)][jchoo-ssl1] [(3)[jchoo-ssl3] [slide][jchoo-ssl-slide] |  |Chan Lee  | - | - |
+| 15th February, 2021 | (jchoo) Week10: Self-Supervised Learning [(1)][jchoo-ssl1] [(2)][jchoo-ssl1] [(3)][jchoo-ssl3] [slide][jchoo-ssl-slide] |  |Chan Lee  | - | - |
 | 22th February, 2021 | [(cs231n) Lecture 10: Recurrent Neural Networks][cs231n-lec10]       | Jaeyoon Chun  | - | - |
 | 22th February, 2021 | [(lecun) Week 12: Deep Learning for NLP & Transformer][lecun-nlp]    | Dongyun Hwang | - | - |
 | 1st March, 2021     | [(lecun) Week 13: Graph Convolutional Network][lecun-gcn]            | Hanyeol Lee   | - | - |
