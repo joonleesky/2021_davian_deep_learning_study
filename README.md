@@ -9,7 +9,7 @@
 | 11th January, 2021  | [(cs229) Lecture 4: Perceptron. Exponential family. Generalized Linear Models][cs229-lec4]    | Minjung Kim | [video][week2-vid]| [note][week2-note] |
 | 18th January, 2021  | [(cs231n) Lecture 2: Image Classification][cs231n-lec2]              | Yeojeong Park | [video][week3-vid]   | [note][week3.1-note] |
 | 18th January, 2021  | [(cs231n) Lecture 3: Loss Functions and Optimization][cs231n-lec3]   | Jaesung Lee   | [video][week3-vid]   | - |
-| 25th January, 2021  | [(cs231n) Lecture 4: Introduction to Neural Networks][cs231n-lec4]   | Soonjoon Kwon | [video][week4.1-vid] | - |
+| 25th January, 2021  | [(cs231n) Lecture 4: Introduction to Neural Networks][cs231n-lec4]   | Soonjoon Kwon | [video][week4.1-vid] | [note][week4.1-note] |
 | 25th January, 2021  | [(cs231n) Lecture 5: Convolutional Neural Networks][cs231n-lec5]     | Dongyeon Woo  | [video][week4.2-vid] | [note][week4.2-note] |
 | 1st February, 2021  | [(cs231n) Lecture 6: Training Neural Networks, part 1][cs231n-lec6]  | Yuri Kim      | [video][week5.1-vid] | - |
 | 1st February, 2021  | [(cs231n) Lecture 7: Training Neural Networks, part 2][cs231n-lec7]  | Seungwoo Ryu  | [video][week5.2-vid] | - |
@@ -19,8 +19,6 @@
 | 22th February, 2021 | [(lecun) Week 12: Deep Learning for NLP & Transformer][lecun-nlp]    | Dongyun Hwang | - | - |
 | 1st March, 2021     | [(lecun) Week 13: Graph Convolutional Network][lecun-gcn]            | Hanyeol Lee   | - | - |
 | 1st March, 2021     | [(cs231n) Lecture 13: Generative Models][cs231n-lec13]               | Jaeun Jeong   | - | - |
-
-
 
 [cs229-lec2]:https://www.youtube.com/watch?v=4b4MUYve_U8&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=2
 [cs229-lec3]:https://www.youtube.com/watch?v=4b4MUYve_U8&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=3
@@ -52,4 +50,6 @@
 [week1.2-note]:posts/week1.2_locally_weighted_and_logistic_regression.md
 [week2-note]:posts/week2_perceptron_exponentialfamily_softmax.md
 [week3.1-note]:posts/week3.1_image_classification.md
-[week4.2-note]:posts/week4.2_Convolutional_Neural_Networks
+[week4.1-note]:posts/week4.1_Neural_Network.md
+[week4.2-note]:posts/week4.2_Convolutional_Neural_Networks.md
+[week5.1-note]:posts/week5.1_training_neural_networks_part1.md
