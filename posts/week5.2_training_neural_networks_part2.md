@@ -35,13 +35,16 @@
 
 #### Problems of SGD  
 - `Problem1`. Occurrence of learning speed difference along the different direction  
-  ![3](https://user-images.githubusercontent.com/43376853/107843846-b8de2e00-6e11-11eb-9147-550055255022.png)  
+
+  ![3](https://user-images.githubusercontent.com/43376853/107843846-b8de2e00-6e11-11eb-9147-550055255022.png)    
   - SGD causes 'zig-zag' shaped unstable learning.  
   - Unstable 'zig-zag' behavior deepens as dimension increases.  
   
 - `Problem2`: Stucking in __local minima__ or __saddle point__   
+
   ![4](https://user-images.githubusercontent.com/43376853/107843896-50438100-6e12-11eb-90ae-604acbc24b59.png)  
-  - Far way from 'real' optimum point  
+  - Far away from 'real' optimum point  
+        
   
     ||Local Minima|Saddle Point|  
     |-|------------|------------|
