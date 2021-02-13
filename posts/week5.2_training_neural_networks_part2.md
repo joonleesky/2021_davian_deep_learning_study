@@ -204,8 +204,8 @@
 
 ### 3.Data Augmentation  
 - Kind of tweak that is augmenting the number of train dataset by transforming the original data with same labels.  
-  ![23](https://user-images.githubusercontent.com/43376853/107845816-d5826200-6e21-11eb-9c57-8841a8f4fe39.png)  
-  
+  ![24](https://user-images.githubusercontent.com/43376853/107845906-838e0c00-6e22-11eb-9ee4-f6efad748913.png)
+
 - A lot of skills which can be considered  
   - Horizontal flips  
   - Random crops & scales  
@@ -220,5 +220,30 @@
 ---  
 
 ## Transfer Learning  
+- ["Transfer learning is a machine learning method where a model developed for a task is reused as the starting point for a model on a second task."](https://machinelearningmastery.com/transfer-learning-for-deep-learning/)  
 
+- Example for transfer learning with CNNs  
+  ![25](https://user-images.githubusercontent.com/43376853/107845956-0747f880-6e23-11eb-8a4b-4cc117011c93.png)  
+  
+  - The model on the left is the model already trained on Imagenet.  
+  - For my own task, I can use this model as a good starting point.  
+  - Just randomly re-initialize and train the top-layer, freezing other layers.  
+  - It works pretty well.  
+  
+- The performance of Transfer Learning is decided according to the characteristics of my own dataset.  
+  Need to consider two stuffs: the number of data, similarity of my data with data for pre-trained model.  
+  Table below is prescription for this problem.  
+  ![26](https://user-images.githubusercontent.com/43376853/107846043-dcaa6f80-6e23-11eb-85e2-f8a65bf9cc00.png)  
+  
+- Of course, according to tasks, we can use more than two pre-trained models.  
+  ![27](https://user-images.githubusercontent.com/43376853/107846073-1da28400-6e24-11eb-8710-ca82e00a2027.png)  
+  
+- Using a pre-trained model is pervasive.  
+
+---  
+
+## Reference & Further readings
+- https://machinelearningmastery.com/transfer-learning-for-deep-learning/  
+- https://arxiv.org/abs/1912.02757  
+- https://arxiv.org/abs/1803.05407  
 
