@@ -44,7 +44,7 @@
 - `Problem2`: Stucking in __local minima__ or __saddle point__   
 
   ![4](https://user-images.githubusercontent.com/43376853/107843896-50438100-6e12-11eb-90ae-604acbc24b59.png)  
-  - Far away from 'real' optimum point  
+  - Far from global optimum point  
         
   - Occurrence Frequency  
     ||Local Minima|Saddle Point|  
@@ -85,8 +85,8 @@
       
     ![10](https://user-images.githubusercontent.com/43376853/107844339-db724600-6e15-11eb-9bd2-d60c1c94a100.png)  
 
-- It has nice theoretial property in terms of convex optimization, but a Neural Network is non-convex environment.  
-- It shows similar movement in terms of `overshooting` behavior.  
+- It has nice theoretical property in terms of convex optimization, but a Neural Network is at non-convex environment.  
+- It shows similar movement with SGD+momentum in terms of `overshooting` behavior.  
     
   ![11](https://user-images.githubusercontent.com/43376853/107844453-d82b8a00-6e16-11eb-8851-4e3daaf42b10.png)  
 
@@ -132,12 +132,13 @@
 ### 6.Adam   
 - Update rules  
     
-  ![15](https://user-images.githubusercontent.com/43376853/107844816-1bd3c300-6e1a-11eb-8114-4871f135714b.png) 2=0.999, learning_rate=1e-3 or 5e-4 is a great starting point!  
+  ![15](https://user-images.githubusercontent.com/43376853/107844816-1bd3c300-6e1a-11eb-8114-4871f135714b.png)   
+  
   - Considered momentum and grad-squared term at the same time!  
   - With bias correction, `first_unbias` and `second_unbias` become unbiased estimator of 1st and 2nd moment.     
   - β1=0.9, β2=0.999, learning_rate=1e-3 or 5e-4 is a great starting point!  
 
-- Optimization movement reflects on both characteristics of momentum-based methods and grad-squared-based methods  
+- Optimization movement reflects on both characteristics of momentum-based methods and grad-squared-based methods.  
     
   ![16](https://user-images.githubusercontent.com/43376853/107844915-e4194b00-6e1a-11eb-91aa-074c091a77f5.png)  
 
@@ -153,18 +154,18 @@
   ![17](https://user-images.githubusercontent.com/43376853/107845047-fd6ec700-6e1b-11eb-991e-cebfaaf89329.png)  
   
 #### Second-Order Optimization  
-- Gradient updates happens through 'Quadratic' Approximation    
+- Gradient updates happens through 'Quadratic' Approximation.    
     
   ![18](https://user-images.githubusercontent.com/43376853/107845048-fe9ff400-6e1b-11eb-9b38-42c4342eaf51.png)  
   
   ![19](https://user-images.githubusercontent.com/43376853/107845049-ff388a80-6e1b-11eb-9aa0-23ec2c7c4c40.png)  
   
-  Second-order optimization is really nice optimization method for two reasons:  
+  Second-order optimization is a really nice optimization method for two reasons:  
   1. J(θ) can be calculated easily using Taylor expansion.  
   2. No hyperparameters such as learning rate are needed. (Closed form Newton parameter update is enough.)  
   
   In spite of these conveniences, second-order optimization is not really practical in Deep Learning domain.  
-  It's because computing a Hessian matrix requires O(N^2) complexities, and computing the inverse matrix of Hessian metrix requires O(N^3) complexities, meaning that computer gets too much burden.  
+  It's because computing a Hessian matrix requires O(N^2) complexities, and computing the inverse matrix of Hessian matrix requires O(N^3) complexities, meaning that computer gets too much burden.  
   
   Of course, other variants of second-order optimization exist such as `Quasi-Newton methods` and `L-BFGS`.   
   
@@ -210,7 +211,7 @@
 - Two Interpretations of Dropout  
   1. When turning-off some neurons, it excludes a redundant representation of features.  
     It prevents co-adaptation of features.  
-  2. In some ways, dropout is a large ensemble of models.   
+  2. In some aspects, dropout is a large ensemble of models.   
   
 #### At test time  
 - Little bit different from dropout at training time.  
