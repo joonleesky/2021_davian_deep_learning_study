@@ -22,6 +22,7 @@
 ```  
 
 #### Introducing Optimization  
+  
 ![1](https://user-images.githubusercontent.com/43376853/107843558-83d0dc00-6e0f-11eb-91a0-384080071932.png)  
 - Goal: Finding the most red region  
   (Each color of this graph represents the value of loss, and the most red region is the spot recording the lowest loss.)  
@@ -45,7 +46,7 @@
   ![4](https://user-images.githubusercontent.com/43376853/107843896-50438100-6e12-11eb-90ae-604acbc24b59.png)  
   - Far away from 'real' optimum point  
         
-  
+  - Occurrence Frequency  
     ||Local Minima|Saddle Point|  
     |-|------------|------------|
     |Frequent in|Low-dimension|High-dimension|   
@@ -53,6 +54,7 @@
   
 - `Problem3`: Too noisy movement  
   ![5](https://user-images.githubusercontent.com/43376853/107843960-ea0b2e00-6e12-11eb-9ae8-2a8ca941a8e8.png)  
+    
   - Using whole training data at computing loss is very expensive.  
   - Instead we uses minibatches at computing loss, so it becomes noisy.  
     It is not actually getting the true information about the gradient at every time step, but getting some noisy estimate of the gradient at current point.  
@@ -61,11 +63,13 @@
 
 ### 2.SGD + Momentum  
 - Update rules  
-  ![6](https://user-images.githubusercontent.com/43376853/107844134-47ec4580-6e14-11eb-9bfe-2048b566f236.png)  
+  ![6](https://user-images.githubusercontent.com/43376853/107844134-47ec4580-6e14-11eb-9bfe-2048b566f236.png)   
+    
   - Start to consider `velocity` as a running mean of gradients  
   - ρ: friction (usually 0.9 or 0.99)  
   
 - It alleviates `poor conditioning` problem, and more stable than vanilla SGD.  
+    
   ![8](https://user-images.githubusercontent.com/43376853/107844273-5f77fe00-6e15-11eb-969a-0649f91a5aba.png)  
   
 ---    
@@ -73,20 +77,24 @@
 ### 3.Nesterov   
 - Update rules  
   - Original Version  
+      
     ![9](https://user-images.githubusercontent.com/43376853/107844304-9a7a3180-6e15-11eb-9468-b96013fcd3b2.png)  
       
     - For the convenience of updating, introduced improved version  
   - Improved Version   
+      
     ![10](https://user-images.githubusercontent.com/43376853/107844339-db724600-6e15-11eb-9bd2-d60c1c94a100.png)  
 
 - It has nice theoretial property in terms of convex optimization, but a Neural Network is non-convex environment.  
 - It shows similar movement in terms of `overshooting` behavior.  
+    
   ![11](https://user-images.githubusercontent.com/43376853/107844453-d82b8a00-6e16-11eb-8851-4e3daaf42b10.png)  
 
 ---  
 
 ### 4.Adagrad  
 - Update rules  
+    
   ![12](https://user-images.githubusercontent.com/43376853/107844560-b252b500-6e17-11eb-9e72-f33ab03124c3.png)  
   - Now, it considers grad-squared term instead of velocity.  
   
@@ -101,11 +109,13 @@
 
 ### 5.RMSProp  
 - Update rules  
+    
   ![13](https://user-images.githubusercontent.com/43376853/107844654-a74c5480-6e18-11eb-8213-cc96be5a03c5.png)  
   - It lets the squared estimate actually decay.  
   - It solves the problem suggested in Adagrad, greatly.  
   
 - It greatly adjusts its trajectory such a way that making approximately equal progress among all the dimensions.  
+    
   ![14](https://user-images.githubusercontent.com/43376853/107844688-0f9b3600-6e19-11eb-84ae-ff15ed2ba294.png)  
   
 ---  
@@ -121,12 +131,14 @@
 
 ### 6.Adam   
 - Update rules  
+    
   ![15](https://user-images.githubusercontent.com/43376853/107844816-1bd3c300-6e1a-11eb-8114-4871f135714b.png) 2=0.999, learning_rate=1e-3 or 5e-4 is a great starting point!  
   - Considered momentum and grad-squared term at the same time!  
   - With bias correction, `first_unbias` and `second_unbias` become unbiased estimator of 1st and 2nd moment.     
   - β1=0.9, β2=0.999, learning_rate=1e-3 or 5e-4 is a great starting point!  
 
 - Optimization movement reflects on both characteristics of momentum-based methods and grad-squared-based methods  
+    
   ![16](https://user-images.githubusercontent.com/43376853/107844915-e4194b00-6e1a-11eb-91aa-074c091a77f5.png)  
 
 ---  
@@ -137,10 +149,12 @@
 
 #### First-Order Optimization  
 - Gradient updates happens through 'Linear' approximation.  
+    
   ![17](https://user-images.githubusercontent.com/43376853/107845047-fd6ec700-6e1b-11eb-991e-cebfaaf89329.png)  
   
 #### Second-Order Optimization  
 - Gradient updates happens through 'Quadratic' Approximation    
+    
   ![18](https://user-images.githubusercontent.com/43376853/107845048-fe9ff400-6e1b-11eb-9b38-42c4342eaf51.png)  
   
   ![19](https://user-images.githubusercontent.com/43376853/107845049-ff388a80-6e1b-11eb-9aa0-23ec2c7c4c40.png)  
@@ -183,12 +197,14 @@
 
 ### 1.Adding term to loss  
 - It was mentioned on earlier lectures.  
+    
   ![20](https://user-images.githubusercontent.com/43376853/107845576-cc909100-6e1f-11eb-971a-3f8146b730eb.png)  
   
 ### 2.Dropout  
 #### At training time  
 - At 'forward' pass, it randomly 'turns-off' the neurons per each layer by probability 'p'.  
   p=0.5 is common.  
+      
   ![21](https://user-images.githubusercontent.com/43376853/107845621-242efc80-6e20-11eb-88c9-8d6a4cc890ed.png)  
   
 - Two Interpretations of Dropout  
@@ -200,6 +216,7 @@
 - Little bit different from dropout at training time.  
 - It is undesirable to assign a randomness at test time.  
 - When updating during test time, just `multiply` by dropout probability.  
+    
   ![22](https://user-images.githubusercontent.com/43376853/107845717-1d54b980-6e21-11eb-94d7-fd05eb0f27cb.png)  
   
 - Idea at test time is similar with that of `Batch Normalization`.  
@@ -207,6 +224,7 @@
 
 ### 3.Data Augmentation  
 - Kind of tweak that is augmenting the number of train dataset by transforming the original data with same labels.  
+    
   ![24](https://user-images.githubusercontent.com/43376853/107845906-838e0c00-6e22-11eb-9ee4-f6efad748913.png)
 
 - A lot of skills which can be considered  
@@ -226,6 +244,7 @@
 - ["Transfer learning is a machine learning method where a model developed for a task is reused as the starting point for a model on a second task."](https://machinelearningmastery.com/transfer-learning-for-deep-learning/)  
 
 - Example for transfer learning with CNNs  
+    
   ![25](https://user-images.githubusercontent.com/43376853/107845956-0747f880-6e23-11eb-8a4b-4cc117011c93.png)  
   
   - The model on the left is the model already trained on Imagenet.  
@@ -236,9 +255,11 @@
 - The performance of Transfer Learning is decided according to the characteristics of my own dataset.  
   Need to consider two stuffs: the number of data, similarity of my data with data for pre-trained model.  
   Table below is prescription for this problem.  
+      
   ![26](https://user-images.githubusercontent.com/43376853/107846043-dcaa6f80-6e23-11eb-85e2-f8a65bf9cc00.png)  
   
 - Of course, according to tasks, we can use more than two pre-trained models.  
+    
   ![27](https://user-images.githubusercontent.com/43376853/107846073-1da28400-6e24-11eb-8710-ca82e00a2027.png)  
   
 - Using a pre-trained model is pervasive.  
