@@ -31,14 +31,15 @@
  
 ### 4. ResNet (2015)
  - Revolutional deep 152 Layers, Residual Connections
- ![](images/RexNet.png)
+ ![](images/ResNet.png)
  
  ![](images/Analysis_Models.png)
   
 ## Other architectures to know
 
 ### 1. Network in Network (2014)
-
+ ![](images/NiN.png)
+ 
 ### 2. Wide ResNet (2016)
  ![](images/Wide_ResNet.png)
  
