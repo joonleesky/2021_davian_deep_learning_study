@@ -45,6 +45,7 @@
  
 ### 4. ResNet (2015)
  - Revolutional deep 152 Layers, Residual Connections
+
  ![](images/ResNet.png)
  - Previous Problem : Just stacking deeper layers on a "plain" convolutional neural network makes optimiazation problem
  - Solution : Using identity mapping
