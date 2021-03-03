@@ -17,7 +17,7 @@
 | 15th February, 2021 | (jchoo) Week10: Self-Supervised Learning [(1)][jchoo-ssl1] [(2)][jchoo-ssl1] [(3)][jchoo-ssl3] [slide][jchoo-ssl-slide] | Chan Lee  | [video][week6.2-vid] | - |
 | 22th February, 2021 | [(cs231n) Lecture 10: Recurrent Neural Networks][cs231n-lec10]       | Jaeyoon Chun  | [video][week7.1-vid] | - |
 | 22th February, 2021 | [(lecun) Week 12: Deep Learning for NLP & Transformer][lecun-nlp]    | Dongyun Hwang | [video][week7.2-vid] | - |
-| 1st March, 2021     | [(cs231n) Lecture 13: Generative Models][cs231n-lec13]               | Jaeun Jeong <br> Hanyeol Lee | - | - |
+| 1st March, 2021     | [(cs231n) Lecture 13: Generative Models][cs231n-lec13]               | Jaeun Jeong <br> Hanyeol Lee | [video][week8-vid] | - |
 
 [cs229-lec2]:https://www.youtube.com/watch?v=4b4MUYve_U8&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=2
 [cs229-lec3]:https://www.youtube.com/watch?v=4b4MUYve_U8&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=3
@@ -51,6 +51,7 @@
 [week6.2-vid]:https://drive.google.com/file/d/1uSSShHSSAUd56bmi-dcKCNmBCDR7Qg8f/view?usp=sharing
 [week7.1-vid]:https://drive.google.com/file/d/1ogHc7Ry24skLTxmiOxCtSJfsBsTMIajN/view?usp=sharing
 [week7.2-vid]:https://drive.google.com/file/d/1R9NWD3pvyKaYyBL7o8_LotXUi4kWCr4M/view?usp=sharing
+[week8-vid]:https://drive.google.com/file/d/1YRJgZVvD-bPJ9e7Ct1XiLV03afY8so0W/view?usp=sharing
 
 [week1.1-note]:posts/week1.1_linear_regression.md
 [week1.2-note]:posts/week1.2_locally_weighted_and_logistic_regression.md
