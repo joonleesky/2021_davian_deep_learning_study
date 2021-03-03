@@ -59,7 +59,7 @@
 #
 ## Optimization
 - **Naive definition**: Find the good parameters(W).
-![](image/../images/image03.png)
+![](images/image03.png)
   - J is a Cost Function
   - Figure w/ single parameter
 - **Method1**: Gradient Descent(GD)
@@ -74,7 +74,7 @@
     - Knowledge distillation(NIPS 2014)
       - Definition: Transfer well-pre-trained Teacher network's knowledge to Student network(boosting small network's performance like big network)
    
-   ![](images/knowledge%20distillation.png)
+   ![](images/knowledge_distillation.png)
 
    - Self-distillation(CVPR 2020)
      - Description: 
