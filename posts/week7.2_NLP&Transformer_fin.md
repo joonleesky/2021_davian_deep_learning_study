@@ -134,7 +134,7 @@ Will see in detail how self-attention is calculated in the Transformer model.
       	* However, this explicit limit of max sequence length is not very problematic since real-world sequences don't have infinite lenght.
     * No explicit information about order of the sequence.
       	* Adds positional embeddings to work out this problem.
-      	* ![Positional_Encoding](images/Positional_Encoding.png)
+      	* ![Positional_encoding](images/Positional_encoding.png)
 
 ### 5. Language Models use "Masked" Self-attention
 
