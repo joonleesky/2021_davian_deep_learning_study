@@ -35,7 +35,7 @@
   - Given training data, generate new samples from same distribution
   - Want to learn $p_{model}(x)$ similar to $p_{data}(x)$
 
-  - **Taxonomy of Generative models:**![01_taxonomy of generative models](.\images\lecture13-01_taxonomy.png)image reference: [[1](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)]
+  - **Taxonomy of Generative models:**![01_taxonomy of generative models](images\lecture13-01_taxonomy.png)image reference: [[1](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)]
 
 
 
@@ -61,7 +61,7 @@ Explicit density model, optimizes exact likelihood, good samples. But inefficien
 
 ### PixelRNN
 
-![03_PixelRNN](.\images\lecture13-03_PixelRNN.png) 
+![03_PixelRNN](images\lecture13-03_PixelRNN.png) 
 
 Figure 1: Visualization example of previous pixels: [[1](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)]
 
@@ -74,7 +74,7 @@ Figure 1: Visualization example of previous pixels: [[1](http://cs231n.stanford.
 
 ### PixelCNN
 
-![04_PixelCNN](.\images\lecture13-04_PixelCNN.png) 
+![04_PixelCNN](images\lecture13-04_PixelCNN.png) 
 
 Figure 2: A visualization of the PixelCNN that maps a neighborhood of pixels to prediction for
 the next pixel. To generate pixel $x_i$ the model can only condition on the previously generated pixels
@@ -282,7 +282,7 @@ D=2인 Z축에서 매우 smooth하게 변하고 있음을 볼 수 있다.
 
 - Take game-theoretic approach, learn to generate from training distribution through 2-player game.  But can be tricky and unstable to train, no inference queries such as $p(x)$, $p(z|x)$.
 
-![lecture13-05_realOrFake](.\images\lecture13-05_realOrFake.png) Fake and real images [[1](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)]
+![lecture13-05_realOrFake](images\lecture13-05_realOrFake.png) Fake and real images [[1](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)]
 
 - Problem: Want to sample from complex, high-dimensional training distribution. No way to do this.
 - Solution: Sample from a simple distribution, e.g. random noise. Learn transformation to training distribution.
@@ -293,7 +293,7 @@ D=2인 Z축에서 매우 smooth하게 변하고 있음을 볼 수 있다.
 
 - Minmax objective function:
 
-![lecture13-06_GAN_objectiveFunction1](.\images\lecture13-06_GAN_objective_function1.png) Minmax objective loss function [[1](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)]
+![lecture13-06_GAN_objectiveFunction1](images\lecture13-06_GAN_objective_function1.png) Minmax objective loss function [[1](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)]
 
 - Generator($\theta_g$) network: try to fool the discriminator by generating real-looking images
   
@@ -306,25 +306,25 @@ D=2인 Z축에서 매우 smooth하게 변하고 있음을 볼 수 있다.
 
   1. **Gradient ascent** on discriminator:
 
-     ![lecture13-08_GAN_objective_function2](.\images\lecture13-08_GAN_objective_function2.png) 
+     ![lecture13-08_GAN_objective_function2](images\lecture13-08_GAN_objective_function2.png) 
 
   2. **Gradient descent** on generator in origin:
 
-     ![lecture13-09](.\images\lecture13-09_GAN_objective_function3.png)
+     ![lecture13-09](images\lecture13-09_GAN_objective_function3.png)
 
      - In practice, optimizing the generator objective function does not work well.
 
-     ![11_generator_gradient_descent](.\images\lecture13-11_generator_gradient_descent.png) Figure 3: [[1](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)]
+     ![11_generator_gradient_descent](images\lecture13-11_generator_gradient_descent.png) Figure 3: [[1](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)]
 
      - When sample is likely fake, want to learn from it to improve generator. But gradient in this region is relatively flat.
 
      - Gradient signal dominated by region where sample is already good.
 
-  3. **Gradient ascent** on generator **in standard practice (Instead of the "2. Gradient descent on generator in origin"):**![lecture13-12](.\images\lecture13-12.png) 
+  3. **Gradient ascent** on generator **in standard practice (Instead of the "2. Gradient descent on generator in origin"):**![lecture13-12](images\lecture13-12.png) 
 
      - Instead of minimizing likelihood of discriminator being correct, now maximize likelihood of discriminator being wrong.
 
-     ![lecture13-13](.\images\lecture13-13.png) Figure 4: [[1](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)]  
+     ![lecture13-13](images\lecture13-13.png) Figure 4: [[1](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)]  
 
      - Same objective of fooling discriminator, but now higher gradient signal for bad samples. So it works better.
 
@@ -337,21 +337,21 @@ D=2인 Z축에서 매우 smooth하게 변하고 있음을 볼 수 있다.
 
 Generative models create a model $\theta$ that maximizes the maximum likelihood estimation (MLE). to find the best model parameters that fit the training data the most.
 
-![lecture13-16](.\images\lecture13-16.png)
+![lecture13-16](images\lecture13-16.png)
 
 - This is the same as minimizing the KL-divergence $KL(p,q)$ which measures how the estimated probability distribution $q$ diverges from the real world expected distribution p. ([proof in detail](https://jhui.github.io/2017/01/05/Deep-learning-Information-theory/))
 
-![lecture13-17](.\images\lecture13-17.png)
+![lecture13-17](images\lecture13-17.png)
 
 - KL-divergence is not symmetrical.
 
-![lecture13-18](.\images\lecture13-18.png)
+![lecture13-18](images\lecture13-18.png)
 
 - As you see in figure 5, the KL-divergence $D_{KL}(p||q)$ penalizes the generator if it misses some modes of images: the penalty is high where $p(x) > 0$ but $q(x) → 0$. Nevertheless, it is acceptable that some images do not look real. The penalty is low when $p(x) → 0$ but $q(x) > 0$. **(Poorer quality but more diverse samples)**
 
 - On the other hand, the reverse KL-divergence $D_{KL}(q||p)$ penalizes the generator if the images do not look real: high penalty if *p(x) → 0* but *q(x) > 0*. But it explores less variety: low penalty if *q(x) → 0* but *p(x) > 0*. **(Better quality but less diverse samples)**
 
-  ![lecture13-19:  probability density function of p and q (left), KL-divergence of p and q (right) ](.\images\lecture13-19.png) Figure 5: probability density function of p and q (left), KL-divergence of $p$ and $q$ (right) [9]
+  ![lecture13-19:  probability density function of p and q (left), KL-divergence of p and q (right) ](images\lecture13-19.png) Figure 5: probability density function of p and q (left), KL-divergence of $p$ and $q$ (right) [9]
 
 
 
@@ -369,9 +369,9 @@ Generative models create a model $\theta$ that maximizes the maximum likelihood 
 
 **Mode collapse** refers to the phenomenon that the model we are trying to train does not cover all the distribution of the actual data and loses diversity. This is a case where *G* cannot find the entire data distribution because it is only learning to reduce the loss, and it is strongly concentrated in only one *mode* at a time as shown in the figure below. For example, this is the case where *G* trained on MNIST generates only certain numbers. [7]
 
-![lecture13-14](.\images\lecture13-14.png)The problem that the probability density functions of generator and discriminator are alternatively vibrating without converging is related to mode collapse [7]
+![lecture13-14](images\lecture13-14.png)The problem that the probability density functions of generator and discriminator are alternatively vibrating without converging is related to mode collapse [7]
 
-![lecture13-15](.\images\lecture13-15.png) mode collapse example [7], [9]
+![lecture13-15](images\lecture13-15.png) mode collapse example [7], [9]
 
 
 
@@ -388,7 +388,7 @@ The key to solve the model collapse is to train the model to learn the boundarie
 
 ## Conclusion
 
-![conclusion of lecture 13](.\images\lecture13-20.png)
+![conclusion of lecture 13](images\lecture13-20.png)
 
 
 
