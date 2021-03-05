@@ -41,9 +41,9 @@
 
 ## PixelRNN and PixelCNN
 
-Explicit density model, optimizes exact likelihood, good samples. But inefficient sequential generation.
-
 ### Explicit density model
+
+Explicit density model, optimizes exact likelihood, good samples. But inefficient sequential generation.
 
 - Use chain rule to decompose likelihood of an image x into product of 1-d distributions:
 
@@ -59,38 +59,60 @@ Explicit density model, optimizes exact likelihood, good samples. But inefficien
 
 - Need to define ordering of **previous pixels**
 
-- #### PixelRNN
+### PixelRNN
 
-  ![03_PixelRNN](.\images\lecture13-03_PixelRNN.png) 
+![03_PixelRNN](.\images\lecture13-03_PixelRNN.png) 
 
-  image reference: [[1](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)]
+Figure 1: Visualization example of previous pixels: [[1](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)]
 
-  - Generate image pixels starting from corner.
-  - Dependency on previous pixels now modeled using an RNN (LSTM).
-    - In this example, the pixels to the left and top of the current pixel are defined as the previous pixels.
-    - If no previous pixel, use  padding.
-  - Drawback: 
-    - Sequential generation is slow.
+- Generate image pixels starting from corner.
+- Dependency on previous pixels now modeled using an RNN (LSTM).
+  - In this example, the pixels to the left and top of the current pixel are defined as the previous pixels.
+  - If no previous pixel, use  padding.
+- Drawback: 
+  - Sequential generation is slow.
 
-- #### PixelCNN
+### PixelCNN
 
-  ![04_PixelCNN](.\images\lecture13-04_PixelCNN.png)image reference: [[1](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)]
+![04_PixelCNN](.\images\lecture13-04_PixelCNN.png) 
 
-  - Generate image pixels starting from corner
+Figure 2: A visualization of the PixelCNN that maps a neighborhood of pixels to prediction for
+the next pixel. To generate pixel $x_i$ the model can only condition on the previously generated pixels
+$x_1$, . . . $x_{i−1}$. [4]
 
-  - Dependency on previous pixels now modeled using a CNN over context region
+- Generate image pixels starting from corner
 
-  - Training: maximize likelihood of training images
+- Dependency on previous pixels now modeled using a CNN over context region
 
-    $p_{\theta}(x)=\prod_{i=1}^{n} p_{\theta}(x_i|x_1, ..., x_{i-1})$
+- Training: maximize likelihood of training images
 
-  - Drawback: 
+  $p_{\theta}(x)=\prod_{i=1}^{n} p_{\theta}(x_i|x_1, ..., x_{i-1})$
 
-    - The generation process is still slow. (Because generation must still proceed sequentially)
-    - The major drawback of Pixel CNN is that it’s performance is worse than Pixel RNN.
-    - Another drawback is the presence of a Blind Spot in the receptive field. (Masking all pixels next to i'th pixels (e.g. $i+1$, $i+2$, ...) in the receptive field at training step.)
+- Drawback: 
 
+  - The generation process is still slow. (Because generation must still proceed sequentially)
+  - The major drawback of Pixel CNN is that it’s performance is worse than Pixel RNN.
+  - Another drawback is the presence of a Blind Spot in the receptive field. (Masking $x_i$ and all pixels next to $x_i$ pixel (e.g. $x_{i+1}$, $x_{i+2}$, ...) in the receptive field at training step.
+  
+- **Pros**: 
 
+  - Can explicitly compute likelihood $p(x)$ 
+  - Explicit likelihood of training data gives good evaluation metric
+  - Good samples
+
+- **Con**:
+
+  - Slow because of sequential generation
+
+- Improving PixelCNN performance
+
+  - Gated convolutional layers
+  - Short_cut connections
+  - Discretized logistic loss
+  - Multi-scale
+  - Training tricks
+
+  
 
 ---
 
@@ -292,17 +314,17 @@ D=2인 Z축에서 매우 smooth하게 변하고 있음을 볼 수 있다.
 
      - In practice, optimizing the generator objective function does not work well.
 
-     ![11_generator_gradient_descent](.\images\lecture13-11_generator_gradient_descent.png) image reference: [[1](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)]
+     ![11_generator_gradient_descent](.\images\lecture13-11_generator_gradient_descent.png) Figure 3: [[1](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)]
 
      - When sample is likely fake, want to learn from it to improve generator. But gradient in this region is relatively flat.
 
      - Gradient signal dominated by region where sample is already good.
 
-  3. **Gradient ascent** on generator **in standard practice (Instead of the "2. Gradient descent on generator in origin"):**![lecture13-12](.\images\lecture13-12.png) image reference: [[1](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)]
+  3. **Gradient ascent** on generator **in standard practice (Instead of the "2. Gradient descent on generator in origin"):**![lecture13-12](.\images\lecture13-12.png) 
 
      - Instead of minimizing likelihood of discriminator being correct, now maximize likelihood of discriminator being wrong.
 
-     ![lecture13-13](.\images\lecture13-13.png) image reference: [[1](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)]  
+     ![lecture13-13](.\images\lecture13-13.png) Figure 4: [[1](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture13.pdf)]  
 
      - Same objective of fooling discriminator, but now higher gradient signal for bad samples. So it works better.
 
@@ -325,9 +347,11 @@ Generative models create a model $\theta$ that maximizes the maximum likelihood 
 
 ![lecture13-18](.\images\lecture13-18.png)
 
-- The KL-divergence $DL(p,q)$ penalizes the generator if it misses some modes of images: the penalty is high where $p(x) > 0$ but $q(x) → 0$. Nevertheless, it is acceptable that some images do not look real. The penalty is low when $p(x) → 0$ but $q(x) > 0$. **(Poorer quality but more diverse samples)**
+- As you see in figure 5, the KL-divergence $D_{KL}(p||q)$ penalizes the generator if it misses some modes of images: the penalty is high where $p(x) > 0$ but $q(x) → 0$. Nevertheless, it is acceptable that some images do not look real. The penalty is low when $p(x) → 0$ but $q(x) > 0$. **(Poorer quality but more diverse samples)**
 
-  ![lecture13-19:  probability density function of p and q (left), KL-divergence of p and q (right) ](.\images\lecture13-19.png) Figure: probability density function of p and q (left), KL-divergence of $p$ and $q$ (right) [9]
+- On the other hand, the reverse KL-divergence $D_{KL}(q||p)$ penalizes the generator if the images do not look real: high penalty if *p(x) → 0* but *q(x) > 0*. But it explores less variety: low penalty if *q(x) → 0* but *p(x) > 0*. **(Better quality but less diverse samples)**
+
+  ![lecture13-19:  probability density function of p and q (left), KL-divergence of p and q (right) ](.\images\lecture13-19.png) Figure 5: probability density function of p and q (left), KL-divergence of $p$ and $q$ (right) [9]
 
 
 
@@ -378,4 +402,4 @@ The key to solve the model collapse is to train the model to learn the boundarie
 - [6] [cs231n 2020 lecture11](http://cs231n.stanford.edu/slides/2020/lecture_11.pdf)
 - [7] [mode collapse in GANs](https://ratsgo.github.io/generative%20model/2017/12/20/gan/)
 - [8] [developers.google.com: mode collapse](https://developers.google.com/machine-learning/gan/problems)
-- [9] solutions of mode collapse [https://jonathan-hui.medium.com/gan-why-it-is-so-hard-to-train-generative-advisory-networks-819a86b3750b#4987]
+- [9] [solutions of mode collapse](https://jonathan-hui.medium.com/gan-why-it-is-so-hard-to-train-generative-advisory-networks-819a86b3750b#4987)
