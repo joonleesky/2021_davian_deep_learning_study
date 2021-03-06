@@ -15,8 +15,8 @@
 | 1st February, 2021  | [(cs231n) Lecture 7: Training Neural Networks, part 2][cs231n-lec7]  | Seungwoo Ryu  | [video][week5.2-vid] | [note][week5.2-note] |
 | 15th February, 2021 | [(cs231n) Lecture 9: CNN Architectures][cs231n-lec9]                 | Dongmin Yoo   | [video][week6.1-vid] | [note][week6.1-note] |
 | 15th February, 2021 | (jchoo) Week10: Self-Supervised Learning [(1)][jchoo-ssl1] [(2)][jchoo-ssl1] [(3)][jchoo-ssl3] [slide][jchoo-ssl-slide] | Chan Lee  | [video][week6.2-vid] | - |
-| 22th February, 2021 | [(cs231n) Lecture 10: Recurrent Neural Networks][cs231n-lec10]       | Jaeyoon Chun  | [video][week7.1-vid] | - |
-| 22th February, 2021 | [(lecun) Week 12: Deep Learning for NLP & Transformer][lecun-nlp]    | Dongyun Hwang | [video][week7.2-vid] | - |
+| 22th February, 2021 | [(cs231n) Lecture 10: Recurrent Neural Networks][cs231n-lec10]       | Jaeyoon Chun  | [video][week7.1-vid] |[note][week7.1-note] |
+| 22th February, 2021 | [(lecun) Week 12: Deep Learning for NLP & Transformer][lecun-nlp]    | Dongyun Hwang | [video][week7.2-vid] |[note][week7.2-note] |
 | 1st March, 2021     | [(cs231n) Lecture 13: Generative Models][cs231n-lec13]               | Jaeun Jeong <br> Haneol Lee | [video][week8-vid] | [note][week8-note] |
 
 [cs229-lec2]:https://www.youtube.com/watch?v=4b4MUYve_U8&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=2
