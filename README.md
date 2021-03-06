@@ -62,4 +62,6 @@
 [week5.1-note]:posts/week5.1_training_neural_networks_part1.md
 [week5.2-note]:posts/week5.2_training_neural_networks_part2.md
 [week6.1-note]:posts/week6.1_CNN_Architectures.md
+[week7.1-note]:posts/week7.1_Recurrent_Neural_Networks.md
+[week7.2-note]:posts/week7.2_NLP&Transformer_fin.md
 [week8-note]:posts/week8_Visualizing_and_Understanding.md
