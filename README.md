@@ -3,7 +3,7 @@
 #### Time: Monday 19:00 - 21:30
 
 |       Date         | Topic | Notes-by | Videos | Notes |
-|:------------------:|:----------------------------------------:|:----------:|:------:|:-----:
+|:------------------:|:----------------------------------------:|:----------:|:------:|:-----:|
 | 4th January, 2021   | [(cs229) Lecture 2: Linear Regression and Gradient Descent][cs229-lec2]                       | Junseok Ha  | [video][week1-vid] |[note][week1.1-note] |
 | 4th January, 2021   | [(cs229) Lecture 3: Weighted Least Squares. Logistic regression. Newton's Method][cs229-lec3] | Minho Park  | [video][week1-vid] |[note][week1.2-note] |
 | 11th January, 2021  | [(cs229) Lecture 4: Perceptron. Exponential family. Generalized Linear Models][cs229-lec4]    | Minjung Kim | [video][week2-vid]| [note][week2-note] |
@@ -17,7 +17,7 @@
 | 15th February, 2021 | (jchoo) Week10: Self-Supervised Learning [(1)][jchoo-ssl1] [(2)][jchoo-ssl1] [(3)][jchoo-ssl3] [slide][jchoo-ssl-slide] | Chan Lee  | [video][week6.2-vid] | - |
 | 22th February, 2021 | [(cs231n) Lecture 10: Recurrent Neural Networks][cs231n-lec10]       | Jaeyoon Chun  | [video][week7.1-vid] | - |
 | 22th February, 2021 | [(lecun) Week 12: Deep Learning for NLP & Transformer][lecun-nlp]    | Dongyun Hwang | [video][week7.2-vid] | - |
-| 1st March, 2021     | [(cs231n) Lecture 13: Generative Models][cs231n-lec13]               | Jaeun Jeong <br> Hanyeol Lee | [video][week8-vid] | - |
+| 1st March, 2021     | [(cs231n) Lecture 13: Generative Models][cs231n-lec13]               | Jaeun Jeong <br> Haneol Lee | [video][week8-vid] | [note][week8-note] |
 
 [cs229-lec2]:https://www.youtube.com/watch?v=4b4MUYve_U8&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=2
 [cs229-lec3]:https://www.youtube.com/watch?v=4b4MUYve_U8&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=3
@@ -62,3 +62,4 @@
 [week5.1-note]:posts/week5.1_training_neural_networks_part1.md
 [week5.2-note]:posts/week5.2_training_neural_networks_part2.md
 [week6.1-note]:posts/week6.1_CNN_Architectures.md
+[week8-note]:posts/week8_Visualizing_and_Understanding.md
