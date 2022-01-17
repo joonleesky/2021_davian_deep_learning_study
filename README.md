@@ -1,4 +1,4 @@
-## DAVIAN Lab. Deep Learning Winter Study (2021)
+## DAVIAN Lab. Deep Learning Winter Study (2020)
 
 #### Time: Monday 19:00 - 21:30
 
